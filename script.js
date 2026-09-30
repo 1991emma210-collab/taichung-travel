@@ -1,0 +1,2 @@
+const place = document.querySelector('#place');
+place.addEventListener('change', () => { const name = place.value; const query = encodeURIComponent(name + ' 臺中'); const frame = document.querySelector('#travel-map'); frame.src = 'https://maps.google.com/maps?q=' + query + '&output=embed&hl=zh-TW'; frame.title = name + '地圖'; document.querySelector('#map-link').href = 'https://www.google.com/maps/search/?api=1&query=' + query; });
